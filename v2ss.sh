@@ -23,9 +23,9 @@ cd v2
 chmod 777 *
 cd ..
 rm -rf v2ray-linux-64.zip
-mv $HOME/cloudfoundry/v2ray1/v2ray $HOME/cloudfoundry/v2ss
-mv $HOME/cloudfoundry/v2ray1/v2ctl $HOME/cloudfoundry/v2ctl
-rm -rf $HOME/cloudfoundry/v2ray1
+mv $HOME/cloudfoundry/v2/v2ray $HOME/cloudfoundry/v2ss
+mv $HOME/cloudfoundry/v2/v2ctl $HOME/cloudfoundry/v2ctl
+rm -rf $HOME/cloudfoundry/v2
 echo '{"inbounds":[{"port":8080,"protocol":"shadowsocks","settings": {"method": "aes-128-gcm","ota": true,"password": "hongchenpasswd"}}],"outbounds": [{"protocol": "freedom","settings": {}}]}'>$HOME/cloudfoundry/config.json
 echo 'applications:'>>manifest.yml
 echo '- path: .'>>manifest.yml
